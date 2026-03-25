@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealer Yamaha | Revs Up</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="z gambar aset/Logo.png" >
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+  
+</head>
+<body>
+
+   <!-------------------------------------
+    |          Navbar Web                |
+    -------------------------------------->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">YAMAHA<span>.</span></div>
+            <ul class="nav-links">         
+                <li class="hideOnMObile"><a href="#home">Home</a></li>
+                <li class="hideOnMObile"><a href="indek.html">Tentang Kami</a></li>
+                <li class="hideOnMObile"><a href="#catalog">Produk</a></li>
+                <li class="hideOnMObile"><a href="https://linktr.ee/revsup">Hubungi Kami</a></li>
+                <li class="hideOnDekstop" onclick = showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <button class="btn-login hideOnMObile" id="btn-open">LOGIN</button>
+        </div>
+    </nav>
+
+    <!-------------------------------------
+    |          Sidebar Web in Mobile       |
+    -------------------------------------->
+    <nav class="sidebar"> 
+        <ul>
+                <li class="hideOnDekstop" onclick = hideSidebar()><a href="#"></a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg><li>       
+                <li ><a href="#home">Home</a></li>
+                <li><a href="indek.html">Tentang Kami</a></li>
+                <li><a href="#catalog">Produk</a></li>
+                <li><a href="https://linktr.ee/revsup">Hubungi Kami</a></li>
+        </ul>
+            <button class="btn-login hideOnDekstop" id="btn-open">LOGIN</button>
+    </nav>
+
+
+
+    <!-------------------------------------
+    |          Login MOdal                |
+    -------------------------------------->
+<div id="loginModal" class="modal">
+  <div class="modal-content" id="ModalContent">
+    <span class="close-btn">&times;</span>
+        <div class="kartu-depan">  
+                <h2>Login</h2>
+                <input type="email" placeholder="Email" id="email" required>
+                <input type="password" placeholder="Password" id="password" required>
+                    <p>Belum punya akun?
+                        <a href="#" onclick="flipcard()">Daftar</a>
+                    </p>
+                    <br>
+            <button type="submit" class="login-submit" id="bisa-masuk">Masuk</button>
+    </div>
+  </div>
+</div>
+
+
+    <!---------------------------------------
+    |          Tampilan Utama               |
+    ---------------------------------------->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h4 class="tagline">PRECISION ENGINEERING</h4>
+            <h1>YAMAHA <br> <span class="outline">MOTORS</span></h1>
+            <p>Rasakan harmoni antara tenaga murni dan seni kontemporer di showroom eksklusif kami.</p>
+           <div class="hero-btns">
+             <a href="#catalog" class="btn-premium-cta">
+                <span>EXPLORE MODELS</span>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" 
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </a>
+                <a href="#order" class="btn-outline-cta">REQUEST A CONSULTATION</a>
+             </div>
+        </div>
+    </section>
+    <!-----------------------------------------------
+    |          End of Tampilan Utama                |
+    ------------------------------------------------>
+
+
+
+    <!--------------------------------------------
+    |          Catalog Dan Produk                |
+    --------------------------------------------->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2 class="section-title">SIGNATURE SERIES</h2>
+            <div class="product-grid">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="z gambar aset/yamaha gear 125 (1).jpeg" alt="YZF-R1M">
+                    </div>
+                    <div class="card-body">
+                        <h3>Yamaha Gear 125</h3>
+                        <p>Motor Matic yang cocok untuk sehari hari, karna motor ini tidak berat dan sangat ringan</p>
+                        <span class="price">IDR 19.000.000</span>
+                      <form action="https://www.yamaha-motor.co.id/product/gear-125/">
+                        <button class="btn-buy" type="submit">Lebih detail</button>
+                      </form>
+                        
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="z gambar aset/MXKing150-Biru-ezgif.com-crop.jpg" alt="MT-09">
+                    </div>
+                    <div class="card-body">
+                        <h3>Yamaha MX-KING 150</h3>
+                        <p>Motor Keren untuk kalangan Gen Z dengan body nya yang tidak terlalu besar dan memakan ruang.</p>
+                        <span class="price">IDR 27.000.000</span>
+                        <form action="https://www.yamaha-motor.co.id/product/mx-king-150/?event=online&note=SEM&product=Filano">
+                            <button class="btn-buy" type="submit">Lebih Detail</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="z gambar aset/perubahan-penyegaran-yamaha-vixion_169.jpeg" alt="MT-09">
+                    </div>
+                    <div class="card-body">
+                        <h3>Yamaha Vixion R 155</h3>
+                        <p>Dengan ukuran tank bensin berukuran besar dan siap untuk menempuh perjalanan jauh</p>
+                        <span class="price">IDR 34.020.000</span>
+                        <form action="https://www.yamaha-motor.co.id/product/vixion/?event=online&note=SEM&product=Filano">
+                            <button class="btn-buy">Lebih Detail</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="z gambar aset/Faz-Neo-2.png" alt="MT-09">
+                    </div>
+                    <div class="card-body">
+                        <h3>Yamaha Fazzio 124cc</h3>
+                        <p>Desain Classy yang membuat motor ini terlihat mewah, rangka yang pendek pas untuk para wanita</p>
+                        <span class="price">IDR 25.250.000</span>
+                    <form action="https://www.yamaha-motor.co.id/product/aerox-alpha/">
+                        <button class="btn-buy">Lebih Detail</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="z gambar aset/yamaha-wr155-r-color-760606.avif" alt="MT-09">
+                    </div>
+                    <div class="card-body">
+                        <h3>WR155R</h3>
+                        <p>Dengan body yang tinggi, Agresif & Tangguh motor ini menjadi pilihan untuk offroad atau berkendara di medan terjal.</p>
+                        <span class="price">IDR 40.275.000</span>
+                      <form action="https://www.yamaha-motor.co.id/product/wr155r/">  
+                        <button class="btn-buy">Lebih Detail</button>
+                      </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="z gambar aset/Aerox Turbo Alpha.webp" alt="MT-09">
+                    </div>
+                    <div class="card-body">
+                        <h3>Aerox CyberCity ABS</h3>
+                        <p>Motor matic besar yang sangat populer di zaman sekarang dan memiliki body tinggi cocok untuk berpergian</p>
+                        <span class="price">IDR 68.215.000</span>
+                       <form action="https://www.yamaha-motor.co.id/product/aerox-alpha/">
+                        <button class="btn-buy">Lebih Detail</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-------------------------------------
+    |          End of Catalog             |
+    -------------------------------------->
+
+
+    <!--Pemesanan-->
+   
+
+
+    <!-------------------------------------------
+    |          Footer dan Penutup               |
+    --------------------------------------------->
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-col brand-info">
+            <div class="logo">YAMAHA<span>.</span></div>
+            <p class="brand-tagline">Experience the ultimate precision and luxury in automotive engineering.</p>
+            <div class="address-box">
+                <p><strong>HEADQUARTERS:</strong></p>
+                <p>Jl. Pejaten Raya No 1 Pasar Minggu, Jakarta Selatan</p>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>EXPLORE</h4>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#catalog">Collection</a></li>
+                <li><a href="#order">Booking Test Drive</a></li>
+                <li><a href="https://wa.me/6281388758335">Hubungi kami</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>CONTACT US</h4>
+            <ul class="contact-list">
+               
+                <li>
+                    <span class="icon">💬</span>
+                    <a href="https://wa.me/6281388758335">+62 813-8875-8335</a>
+                </li>
+                <li>
+                    <span class="icon">✉️</span>
+                    <a href="mailto:contact@yamaha-elite.id">contact@yamaha-elite.id</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>CONNECT</h4>
+            <div class="social-icons">
+                <a href="#" class="social-link" title="Instagram">IG</a>
+                <a href="#" class="social-link" title="YouTube">YT</a>
+                <a href="https://wa.me/6281388758835" class="social-link" title="WhatsApp">WA</a>
+                <a href="#" class="social-link" title="Facebook">FB</a>
+            </div>
+            <p class="newsletter-text">Subscribe for exclusive offers.</p>
+            <div class="newsletter-input">
+                <input type="email" placeholder="Email Address">
+                <button> <a href="https://wa.me/6281388758835">→</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container bottom-flex">
+            <p>&copy; 2026 Yamaha Corporation. All Rights Reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+
+    <!-------------------------------------
+    |          Area JavaSricpt              |
+    -------------------------------------->
+
+   
+    <script src="xml.js"></script>
+    <script src="xlm.js"></script>
+</script>
+</body>
+</html>
