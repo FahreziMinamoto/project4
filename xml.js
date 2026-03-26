@@ -1,28 +1,32 @@
-const modal = document.getElementById("loginModal");
-const btn = document.getElementById("btn-open");
-const closeBtn = document.querySelector(".close-btn");
+//slide slide Hero content section
+const heroSlider = document.querySelectorAll('.hero-overlay');
 
-// Buka modal saat tombol diklik
-btn.onclick = function() {
-  modal.style.display = "block";
+let heroActive = 0;
+
+if(heroSlider) {
+    heroSlider.forEach((hero, index) => {
+      if(index === 0){
+         hero.setAttribute("data-show", "show");
+      } else {
+         hero.setAttribute("data-show", "hidden");
+      }
+    })
+   
+
+    setInterval(() => {
+        heroSlider.forEach((hero, index) => {
+          if(heroActive === index) {
+            hero.setAttribute("data-show", "show");
+          } else {
+            hero.setAttribute("data-show", "hidden");
+          }
+        });
+
+        if(heroActive === heroSlider.length - 1) {
+          heroActive = 0;
+        } else {
+          heroActive++;
+        }
+
+    }, 2000)
 }
-
-// Tutup modal saat tombol (X) diklik
-closeBtn.onclick = function() {
-  modal.style.display = "none";
-}
-
-// Tutup modal jika user klik di luar area kotak login
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-    modal.style.transition = "all 0.3s ease";
-  }
-}
-
-//scroll smoot
-window.screen ({
-  top: 500,
-  behavior: 'smoot'
-});
-
